@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To-Do List Application</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1>My To-Do List</h1>
+                <p>Organize your daily tasks efficiently</p>
+            </div>
+
+            <button id="themeBtn" class="theme-btn">
+                🌙 Dark Mode
+            </button>
+        </header>
+
+
+        <!-- Task Input Section -->
+        <section class="task-form">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+
+            <select id="categoryInput">
+                <option value="General">General</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+
+            <select id="priorityInput">
+                <option value="Low">Low Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="High">High Priority</option>
+            </select>
+
+            <input
+                type="date"
+                id="dateInput"
+            >
+
+            <button id="addBtn">
+                + Add Task
+            </button>
+
+        </section>
+
+
+        <!-- Error Message -->
+        <p id="errorMessage"></p>
+
+
+        <!-- Statistics -->
+        <section class="stats">
+
+            <div class="stat-card">
+                <h3>Total</h3>
+                <p id="totalTasks">0</p>
+            </div>
+
+            <div class="stat-card completed-card">
+                <h3>Completed</h3>
+                <p id="completedTasks">0</p>
+            </div>
+
+            <div class="stat-card pending-card">
+                <h3>Pending</h3>
+                <p id="pendingTasks">0</p>
+            </div>
+
+        </section>
+
+
+        <!-- Search and Filter -->
+        <section class="controls">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search tasks..."
+            >
+
+            <select id="filterInput">
+
+                <option value="all">
+                    All Tasks
+                </option>
+
+                <option value="pending">
+                    Pending
+                </option>
+
+                <option value="completed">
+                    Completed
+                </option>
+
+            </select>
+
+            <select id="categoryFilter">
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="General">
+                    General
+                </option>
+
+                <option value="Work">
+                    Work
+                </option>
+
+                <option value="Study">
+                    Study
+                </option>
+
+                <option value="Personal">
+                    Personal
+                </option>
+
+                <option value="Shopping">
+                    Shopping
+                </option>
+
+            </select>
+
+        </section>
+
+
+        <!-- Task List -->
+        <section>
+
+            <div id="taskList"></div>
+
+            <p id="emptyMessage">
+                No tasks found.
+            </p>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
